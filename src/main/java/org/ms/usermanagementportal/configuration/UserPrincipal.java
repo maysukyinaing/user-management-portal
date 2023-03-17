@@ -1,4 +1,4 @@
-package org.ms.usermanagementportal.config;
+package org.ms.usermanagementportal.configuration;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -5,7 +5,7 @@ import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import org.apache.commons.lang3.StringUtils;
-import org.ms.usermanagementportal.config.UserPrincipal;
+import org.ms.usermanagementportal.configuration.UserPrincipal;
 import org.ms.usermanagementportal.constant.SecurityConstant;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

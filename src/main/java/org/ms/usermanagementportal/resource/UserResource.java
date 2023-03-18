@@ -1,18 +1,20 @@
 package org.ms.usermanagementportal.resource;
 
-import lombok.Getter;
-import org.ms.usermanagementportal.model.User;
+import org.ms.usermanagementportal.exception.domain.EmailExistException;
+import org.ms.usermanagementportal.exception.domain.ExceptionHandling;
+import org.ms.usermanagementportal.exception.domain.UserNotFoundException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/user")
-public class UserResource {
+@RequestMapping(path = {"/","/user"})
+public class UserResource extends ExceptionHandling {
 
     @GetMapping("/home")
-    public String showUser() {
-        return "Application works!";
+    public String showUser() throws UserNotFoundException {
+    //    return "Application works!";
+        throw new UserNotFoundException("This user was not found");
     }
 
 }
